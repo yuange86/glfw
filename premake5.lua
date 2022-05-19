@@ -32,14 +32,9 @@ project "GLFW"
 		"src/null_joystick.c",
 	}
 
-	postbuildcommands
-	{
-		("{MKDIR} %{wks.location}/lib/" ..outputdir .. ""),
-		("{COPY} %{wks.location}/bin/" .. outputdir .. "/%{prj.name}/%{prj.name}.lib %{wks.location}/lib/" ..outputdir .. ""),
-		("{COPY} %{wks.location}/bin/" .. outputdir .. "/%{prj.name}/%{prj.name}.lib %{wks.location}/bin/" .. outputdir .. "/WhiteKash"),
-		("{COPY} %{wks.location}/bin/" .. outputdir .. "/%{prj.name}/%{prj.name}.lib %{wks.location}/bin/" .. outputdir .. "/DevKa"),
-		("{COPY} %{wks.location}/bin/" .. outputdir .. "/%{prj.name}/%{prj.name}.lib %{wks.location}/bin/" .. outputdir .. "/Editor"),
-	}
+	-- postbuildcommands
+	-- {
+	-- }
 
 	filter "system:linux"
 		pic "On"
